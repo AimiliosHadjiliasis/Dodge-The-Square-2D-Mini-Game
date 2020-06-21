@@ -5,7 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float speed = 15f;   //Initialise speed
-    public float mapWidth = 5f;
+    public float mapWidth = 4f;
 
     private Rigidbody2D rb; //Create a reference to the rigid body component of the player
 
