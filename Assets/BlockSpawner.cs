@@ -7,8 +7,22 @@ public class BlockSpawner : MonoBehaviour
 
     public GameObject blockPrefab;
 
+    public float timeBetweenWaves = 1f;
+
+    private float timeToSpawn = 2f;
+
     // Start is called before the first frame update
-    void Start()
+    void Update()
+    {
+        if (Time.time >= timeToSpawn)
+        {
+            SpawnBlocks();
+            timeToSpawn = Time.time + timeBetweenWaves;
+        }
+
+    }
+
+    void SpawnBlocks()
     {
         //Create a random index
         int randomIndex = Random.Range(0, spawnPoints.Length);
@@ -27,6 +41,4 @@ public class BlockSpawner : MonoBehaviour
             }
         }
     }
-
-
 }

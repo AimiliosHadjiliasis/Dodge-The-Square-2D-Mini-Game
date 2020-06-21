@@ -35,4 +35,10 @@ public class Player : MonoBehaviour
         rb.MovePosition(newPosition);
 
     }
+
+    void OnCollisionEnter2D()
+    {
+        Debug.Log("wE COLLIDE");
+        FindObjectOfType<GameManager>().EndGame();
+    }
 }
