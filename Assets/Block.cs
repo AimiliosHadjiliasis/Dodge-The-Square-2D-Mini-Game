@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Block : MonoBehaviour
 {
-
+    //Add increase of gravity by time
     void Start()
     {
         GetComponent<Rigidbody2D>().gravityScale += Time.timeSinceLevelLoad / 20f;
